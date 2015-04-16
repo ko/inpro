@@ -41,6 +41,20 @@ void print_list(LIST_ITEM * head) {
                                              i, current->val);
         current = current->next;
     }
+    printf("%s:%d list[%d]->val = %d\n", __FUNCTION__, __LINE__,
+                                         i, current->val);
+
+}
+
+void print_list_r(LIST_ITEM * node) {
+
+    if (node == NULL) {
+        return;
+    }
+
+    print_list_r(node->next);
+    fprintf(stdout, "%s:%d: node->val = %d\n", __FUNCTION__, __LINE__,
+                                               node->val);
 }
 
 void reverse_iterate(LIST_ITEM ** head) {
@@ -138,4 +152,5 @@ int main(void) {
     reverse(&list_head);
 
     print_list(list_head);
+    print_list_r(list_head);
 }

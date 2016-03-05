@@ -4,11 +4,12 @@
 
 int stringSum(char * s) {
 
+    int sum;
     int i;
 
     for (i = 0; i < strlen(s); i++) {
 
-        i += s[i];
+        sum += s[i];
     }
 
     return i;
@@ -34,7 +35,10 @@ int main(void) {
     char * s1 = "hello";
     char * s2 = "holle";
     char * s3 = "holl";
+    char * s4 = "ad";
+    char * s5 = "bc";
 
     isAnagram(s1, s2);
     isAnagram(s2, s3);
+    isAnagram(s4, s5);
 }

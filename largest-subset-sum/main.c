@@ -18,7 +18,9 @@ int main(void)
 #define OUTPUT_STOP 1
 #define OUTPUT_SUM 2
 
-    int input[SIZEOF_INPUT] = { 1, 2, -4, 1, 3, -2, 3, -1 };
+    // int input[SIZEOF_INPUT] = { 1, 2, -4, 1, 3, -2, 3, -1 };
+    // int input[SIZEOF_INPUT] = { 1, 2, -1, -2 };
+    int input[SIZEOF_INPUT] = { 1, 2, -1, 1, 1 };
     int i, j, k, kSum;
     int out[3] = { 0 };
 
@@ -37,5 +39,5 @@ int main(void)
         }
     }
 
-    printf("%s: %d, %d, %d\n", __FUNCTION__, out[OUTPUT_START], out[OUTPUT_STOP], out[OUTPUT_SUM]);
+    printf("%s: sum of input[ %d ] to input [ %d ] = %d\n", __FUNCTION__, out[OUTPUT_START], out[OUTPUT_STOP], out[OUTPUT_SUM]);
 }
